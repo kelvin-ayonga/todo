@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { ListGroup, ListGroupItem } from 'reactstrap';
 import TodoStore from './../../stores/TodoStore';
 import * as TodoActions from './../../actions/TodoActions';
+import './Todo.css';
 
 class Todo extends Component{
     constructor(props){
@@ -51,9 +52,9 @@ class Todo extends Component{
         })
         return (
             <div>
-                <div className="btn-group" role="group" aria-label="First group">
-                    <button onClick={this.createTodo.bind(this)} className="btn btn-primary mt-3 mb-3">Create</button>
-                    <button onClick={this.reloadTodo.bind(this)} className="btn btn-secondary mt-3 mb-3">Reload</button>
+                <div className="btn-group d-flex mt-3 mb-3" role="group" aria-label="First group">
+                    <button onClick={this.createTodo.bind(this)} className="btn btn-primary">Create</button>
+                    <button onClick={this.reloadTodo.bind(this)} className="btn btn-primary">Reload</button>
                 </div>
                 <ListGroup flush>
                     { todos }
