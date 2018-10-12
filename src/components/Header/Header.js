@@ -6,11 +6,7 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem } from 'reactstrap';
+  NavLink,} from 'reactstrap';
 
 export default class Header extends Component {
   constructor(props) {
@@ -29,15 +25,17 @@ export default class Header extends Component {
   render() {
     return (
         <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">Todo</NavbarBrand>
+        <NavbarBrand href="/"><i className="mdi mdi-book-outline" aria-hidden="true"></i>Todo</NavbarBrand>
         <NavbarToggler onClick={this.toggle} />
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink href="/favorites/">Favorites</NavLink>
+              <NavLink href="/favorites/">
+              <i className="mdi mdi-delete-empty" aria-hidden="true"></i>Favorites</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/settings/">Settings</NavLink>
+              <NavLink href="/settings/">
+              <i className="mdi mdi-account-alert" aria-hidden="true"></i>Settings</NavLink>
             </NavItem>
           </Nav>
         </Collapse>
